@@ -2,14 +2,329 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Waffle Party Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waffle Party - Coming Soon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { background: #f8f8f8; font-family: sans-serif; text-align: center; padding-top: 100px; }
-    h1 { font-size: 3rem; color: #333; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: black;
+    }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .video-background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
-<body>
-  <h1>🍽️ We're ready for Service which name is "Waffle Party"! 🍽️</h1>
-  <p>Coming Soon!</p>
+<body class="relative text-white m-0 p-0">
+
+  <!-- Background Video -->
+  <div class="absolute inset-0 overflow-hidden z-0">
+    <iframe class="video-background"
+      src="https://www.youtube.com/embed/xnUF9Metukg?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=xnUF9Metukg&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&enablejsapi=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+    <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-20 w-full text-center mt-[140px] px-4">
+    <div class="text-sm sm:text-base md:text-lg leading-tight animate-fade-in-down delay-300 mb-[10px]">Spend less, Enjoy more!</div>
+    <div><img src="../images/landing/waffleparty.png" alt="Waffle Party Logo" class="w-[70%] sm:w-[90%] md:w-[600px] animate-fade-in-down delay-500 inline-block"></div>
+    <p class="text-lg md:text-xl max-w-2xl animate-fade-in-up delay-700 opacity-90 mt-4">&nbsp;</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 right-0 text-sm opacity-60 animate-fade-in-up delay-700 text-center w-full py-12 z-20">
+    <div class="flex justify-center items-center mb-10">
+      <img src="../images/landing/comingsoon.png" alt="Waffle Party Logo" class="w-[100px] sm:w-[110px] md:w-[130px]">
+    </div>
+    <div class="mb-1">
+      <button onclick="openModal('terms')" class="hover:underline mx-2 text-gray-400">Terms of Service</button>
+      <button onclick="openModal('privacy')" class="hover:underline mx-2 text-gray-400">Privacy Policy</button>
+    </div>
+    <div class="mb-15 mt-2">© 2025 Divve Games Co., Ltd. All rights reserved.</div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modalWrapper" class="fixed inset-0 hidden z-50">
+    <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="relative flex items-center justify-center h-full w-full px-4">
+      <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-300 max-w-[1000px]  z-50 transform scale-95 opacity-0 transition-all duration-300" id="modalBox">
+        <!-- Close Button -->
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-xl">
+          <img src="../images/landing/close_icon.png" alt="Close" class="w-[16px] sm:w-[18px] md:w-[20px]">
+        </button>
+
+      
+        <!-- Header -->
+        <div class="border-b pb-4 mb-4">
+          <div class="flex justify-center gap-8 font-medium text-gray-600 text-sm sm:text-base md:text-lg">
+            <button onclick="switchContent('terms')" id="termsTab" class="hover:text-gray-800 font-bold">와플파티 이용약관</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="switchContent('privacy')" id="privacyTab" class="hover:text-gray-800 font-bold">개인정보처리방침</button>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div id="termsContent" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700">
+          <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[와플파티 이용약관]</h2>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제1조 (목적)</span><br>
+            본 약관은 주식회사 다이브게임즈(이하 "회사")가 제공하는 구독계정 공유 플랫폼 "Waffle Party" (이하 "플랫폼")의 이용에 있어 
+            회사와 회원 간의 권리·의무 및 책임사항, 서비스 이용조건, 이용 절차, 광고 시청 리워드 서비스 이용에 관한 사항 등을 규정함을 목적으로 합니다.</p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제2조 (약관의 게시와 개정)</span><br>
+            회사는 본 약관을 회원가입 화면 또는 플랫폼 내 고지 메뉴에 게시하며, 관련 법령에 따라 개정할 수 있습니다.</p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제3조 (약관의 해석)</span><br>
+            본 약관에서 정하지 않은 사항은 관계 법령, 플랫폼 내 고지된 정책 및 일반적인 상관례에 따릅니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제4조 (용어의 정의)</span><br>
+            플랫폼 내 주요 용어는 다음과 같습니다.<br>
+            회원 : 회사와 서비스 이용계약을 체결하고 이용하는 자<br>
+            파티 : 구독 공유를 위해 구성된 회원 집합<br>
+            파티장 : 구독 서비스를 직접 결제하여 공유하는 회원<br>
+            파티원 : 파티장에게 비용을 지불하고 공유 받는 회원<br>
+            포인트 : 광고 시청, 미션 참여 등을 통해 적립되는 플랫폼 내 재화<br>
+            광고 리워드 서비스 : 광고 시청 등 미션을 통해 포인트를 지급하는 서비스</p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제5조 (이용계약의 성립)</span><br>
+            회원가입은 소셜로그인 또는 회사가 제공하는 방법을 통해 이루어지며, 회사의 승낙으로 성립됩니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제6조 (이용신청의 승낙과 제한)</span><br>
+            회사는 업무상 또는 기술상 지장이 있는 경우 회원가입을 유보하거나 거절할 수 있습니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제7조 (플랫폼 제공 기능)</span><br>
+            회사는 다음의 서비스를 제공합니다.<br>
+            구독 공유 파티 생성 및 참여 기능<br>
+            공유정보 관리 기능<br>
+            광고 리워드 기능<br>
+            포인트 적립 및 사용 기능</p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제8조 (광고 리워드 서비스 이용)</span><br>
+            회원은 광고 시청, 미션 참여 등을 수행하여 포인트를 적립할 수 있으며, 광고주와의 거래에 대한 법적 관계는 회원 본인에게 있습니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제9조 (플랫폼 이용시간)</span><br>
+            플랫폼은 연중무휴, 24시간 제공되며, 시스템 점검 등으로 일시 중단될 수 있습니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제10조 (정보 제공 및 광고의 게재)</span><br>
+            회사는 서비스 운영을 위해 회원에게 정보를 제공하고 광고를 게재할 수 있습니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제11조 (회사의 의무)</span><br>
+            회사는 서비스의 안정적 제공, 회원 의견 처리, 개인정보 보호 의무를 가집니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제12조 (회원의 의무)</span><br>
+            회원은 다음 각 호의 행위를 하여서는 안됩니다.<br>
+            허위 정보 제공<br>
+            무단 정보 이용<br>
+            서비스 운영 방해<br>
+            광고 리워드 부정 이용<br>
+            기타 관련 법령 및 약관 위반</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제13조 (이용제한 및 계약 해지)</span><br>
+            회원이 본 약관을 위반할 경우 회사는 이용제한, 계약 해지 등의 조치를 취할 수 있습니다. 회원은 언제든지 계약 해지를 요청할 수 있습니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제14조 (책임 제한)</span><br>
+            회사는 회원 간 거래, 파티 내 계정 공유, 광고 리워드 참여 등으로 인한 문제에 대해 책임을 지지 않습니다.</p>
+          
+          <p class="mb-4"><span class="font-bold tracking-tighter">제15조 (분쟁 해결 및 관할법원)</span><br>
+            본 약관은 대한민국 법령에 따라 해석되며, 회사와 회원 간의 분쟁은 서울중앙지방법원을 전속 관할 법원으로 합니다.</p>
+        </div>
+        
+        <div id="privacyContent" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700">
+          <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[개인정보 처리방침]</h2>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제1조 (총칙)</span><br>
+            주식회사 다이브게임즈(이하 “회사”)는 회원의 개인정보 보호를 매우 중요하게 생각하며, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관련 법령을 준수하고 있습니다. 회사는 회원의 개인정보를 보호하기 위하여 다음과 같은 개인정보처리방침을 수립·공개합니다.
+            본 방침은 Waffle Party 서비스(이하 “서비스”) 이용자에게 적용됩니다.</p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제2조 (개인정보의 수집 및 이용 목적)</span><br>
+            회사는 다음의 목적을 위해 최소한의 개인정보를 수집·이용합니다.<br>
+            서비스 제공 및 회원 관리<br>
+            회원 가입의사 확인, 본인 식별·인증, 서비스 제공, 계약이행, 이용자 식별, 불법·부정 이용 방지, 문의 대응 등<br>
+            결제 처리<br>
+            서비스 이용에 따른 요금 결제 및 환불<br>
+            리워드 광고 서비스 제공<br>
+            광고 시청 미션 제공, 포인트 적립·사용, 이용자 편의 제공<br>
+            마케팅 및 광고 활용<br>
+            신규 서비스 안내, 이벤트 제공, 서비스 개선, 통계 및 분석</p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제3조 (수집하는 개인정보 항목 및 방법)</span><br>
+            회사는 다음과 같은 개인정보를 수집할 수 있습니다.<br>
+            회원 가입 시<br>
+            필수: 휴대전화 번호, 이메일 주소, 이름, 생년월일, 성별, 로그인 ID, 소셜 로그인 정보 (Apple, Google, Kakao 등)<br>
+            서비스 이용 과정에서 자동으로 수집되는 정보<br>
+            접속 IP, 쿠키, 접속 일시, 서비스 이용 기록, 광고 시청 기록, 포인트 적립 및 사용 기록<br>
+            유료 서비스 이용 시<br>
+            결제 정보 (신용카드번호, 계좌정보 등)<br>
+            리워드 출금 요청 시<br>
+            본인 명의 계좌정보<br>
+            고객 문의, 이벤트 참여 시<br>
+            이름, 이메일, 연락처</p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제4조 (개인정보의 보유 및 이용기간)</span><br>
+            회사는 개인정보 수집·이용 목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 다만, 관련 법령에 따라 일정 기간 보관해야 하는 정보는 아래와 같습니다.<br>
+            <table class="w-full border border-gray-400">
+              <tr>
+                <td class="border border-gray-400 pl-3">보유 정보</td>
+                <td class="border border-gray-400 pl-3">보유 기간</td>
+                <td class="border border-gray-400 pl-3">근거 법령</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">계약, 청약철회, 대금결제, 서비스 이용 기록</td>
+                <td class="border border-gray-400 pl-3">5년</td>
+                <td class="border border-gray-400 pl-3">전자상거래법</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">소비자 불만 또는 분쟁처리에 관한 기록</td>
+                <td class="border border-gray-400 pl-3">3년</td>
+                <td class="border border-gray-400 pl-3">전자상거래법</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">표시, 광고에 관한 기록</td>
+                <td class="border border-gray-400 pl-3">6개월</td>
+                <td class="border border-gray-400 pl-3">전자상거래법</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">접속 로그, 접속 IP</td>
+                <td class="border border-gray-400 pl-3">1년</td>
+                <td class="border border-gray-400 pl-3">통신비밀보호법</td>
+              </tr>
+            </table><br>
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제5조 (개인정보의 제3자 제공)</span><br>
+              회사는 이용자의 사전 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 단, 법령의 규정에 의거하거나 회원이 사전 동의한 경우, 서비스 제공을 위해 필요한 범위 내에서만 제공됩니다.<br>
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제6조 (개인정보의 처리 위탁)</span><br>
+              <table class="w-full border border-gray-400">
+                <tr>
+                  <td class="border border-gray-400 pl-3">수탁업체</td>
+                  <td class="border border-gray-400 pl-3">위탁업무</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-400 pl-3">NICE평가정보㈜, 다날㈜</td>
+                  <td class="border border-gray-400 pl-3">본인 인증 서비스</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-400 pl-3">페이플㈜</td>
+                  <td class="border border-gray-400 pl-3">결제 대행 서비스</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-400 pl-3">아마존 AWS</td>
+                  <td class="border border-gray-400 pl-3">데이터 저장 및 서버 운영</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-400 pl-3">Google, Amplitude</td>
+                  <td class="border border-gray-400 pl-3">사용자 데이터 분석</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-400 pl-3">채널코퍼레이션</td>
+                  <td class="border border-gray-400 pl-3">고객 상담 시스템 운영</td>
+                </tr>
+                 <tr>
+                  <td class="border border-gray-400 pl-3">네이버클라우드㈜</td>
+                  <td class="border border-gray-400 pl-3">SMS, 알림톡 발송 서비스</td>
+                </tr>
+              </table><br>
+              
+            <p class="mb-4"><span class="font-bold tracking-tighter">제7조 (개인정보의 파기)</span><br>
+              회사는 개인정보 보유기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 정보를 파기합니다.
+              파기 절차 및 방법은 다음과 같습니다.<br>
+              파기 절차: 개인정보는 내부 방침 및 관련 법령에 따라 일정 기간 저장된 후 삭제됩니다.<br>
+              파기 방법: 전자적 파일은 복구 불가능한 방법으로 삭제하며, 종이 문서는 분쇄기로 파기합니다.<br>
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제8조 (이용자의 권리)</span><br> 
+              회원은 언제든지 개인정보 열람, 정정, 삭제, 처리 정지 요청을 할 수 있습니다. 권리 행사는 서비스 내 문의 기능, 이메일, 고객센터를 통해 가능합니다.<br>
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제9조 (개인정보 보호를 위한 안전성 확보조치)</span><br>
+              회사는 개인정보 보호를 위하여 다음과 같은 조치를 취하고 있습니다.<br>
+              개인정보 처리 직원 최소화 및 교육<br>
+              개인정보 암호화<br>
+              해킹 및 바이러스 등 침해 방지 시스템 운영<br>
+              접속 기록의 보관 및 위·변조 방지<br>
+              물리적 보관 장소의 출입 통제<br>
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제10조 (온라인 맞춤형 광고 서비스)</span><br>
+              회사는 서비스 운영을 위해 회원의 서비스 이용 기록, 광고 시청 기록, 포인트 적립 내역 등을 활용하여 맞춤형 광고를 제공할 수 있습니다.<br>
+              
+            <p class="mb-4"><span class="font-bold tracking-tighter">제11조 (개인정보 보호책임자)</span><br>
+              회사는 개인정보 처리에 대한 책임자를 지정하여 이용자의 문의 및 고충 처리를 담당합니다.
+              개인정보 보호책임자: 박정호
+              이메일: privacy@divvegames.com
+              연락처: 010-2949-3077
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제12조 (개인정보 처리방침의 변경)</span><br>
+              본 방침은 법령 및 회사 정책에 따라 변경될 수 있으며, 변경 시 사전 고지 후 시행합니다.<br>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex justify-center">
+          <button onclick="closeModal()" class="px-6 py-2 bg-[#ff5344] rounded-full shadow text-white w-[160px] sm:w-[180px] md:w-[200px] text-sm sm:text-base md:text-lg">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(type) {
+      document.getElementById('modalWrapper').classList.remove('hidden');
+      const modalBox = document.getElementById('modalBox');
+      modalBox.classList.remove('scale-95', 'opacity-0');
+      modalBox.classList.add('scale-100', 'opacity-100');
+      switchContent(type);
+      
+      // 모달 외부 클릭 이벤트 추가
+      document.addEventListener('click', closeModalOnOutsideClick);
+    }
+    
+    function closeModalOnOutsideClick(event) {
+      const modalBox = document.getElementById('modalBox');
+      if (!modalBox.contains(event.target) && !event.target.closest('button')) {
+        closeModal();
+      }
+    }
+    
+    function closeModal() {
+      const modalBox = document.getElementById('modalBox');
+      modalBox.classList.remove('scale-100', 'opacity-100');
+      modalBox.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        document.getElementById('modalWrapper').classList.add('hidden');
+        // 모달이 닫힐 때 이벤트 리스너 제거
+        document.removeEventListener('click', closeModalOnOutsideClick);
+      }, 300);
+    }
+    
+    function switchContent(type) {
+      document.getElementById('termsContent').classList.add('hidden');
+      document.getElementById('privacyContent').classList.add('hidden');
+      document.getElementById('termsTab').classList.remove('text-gray-800');
+      document.getElementById('privacyTab').classList.remove('text-gray-800');
+      if (type === 'terms') {
+        document.getElementById('termsContent').classList.remove('hidden');
+        document.getElementById('termsTab').classList.add('text-gray-800');
+      } else {
+        document.getElementById('privacyContent').classList.remove('hidden');
+        document.getElementById('privacyTab').classList.add('text-gray-800');
+      }
+    }
+  </script>
+
 </body>
 </html>
