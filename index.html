@@ -55,11 +55,11 @@
   <!-- Footer -->
   <footer class="fixed bottom-0 left-0 right-0 text-sm opacity-60 animate-fade-in-up delay-700 text-center w-full py-12 z-20">
     <div class="flex justify-center items-center mb-10">
-      <img src="./comingsoon.png" alt="Waffle Party Logo" class="w-[100px] sm:w-[110px] md:w-[130px]">
+      <img src=".comingsoon.png" alt="Waffle Party Logo" class="w-[100px] sm:w-[110px] md:w-[130px]">
     </div>
     <div class="mb-1">
-      <button onclick="openModal('terms')" class="hover:underline mx-2 text-gray-400">Terms of Service</button>
-      <button onclick="openModal('privacy')" class="hover:underline mx-2 text-gray-400">Privacy Policy</button>
+      <button onclick="openModal('terms_kr')" class="hover:underline mx-2 text-gray-400">Terms of Service</button>
+      <button onclick="openModal('privacy_kr')" class="hover:underline mx-2 text-gray-400">Privacy Policy</button>
     </div>
     <div class="mb-15 mt-2">© 2025 Divve Games Co., Ltd. All rights reserved.</div>
   </footer>
@@ -77,201 +77,628 @@
       
         <!-- Header -->
         <div class="border-b pb-4 mb-4">
-          <div class="flex justify-center gap-8 font-medium text-gray-600 text-sm sm:text-base md:text-lg">
-            <button onclick="switchContent('terms')" id="termsTab" class="hover:text-gray-800 font-bold">와플파티 이용약관</button>
+          <div class="flex justify-center gap-4 font-medium text-gray-600 text-sm sm:text-base md:text-lg">
+            <button onclick="switchContent('terms_kr')" id="termsTab_kr" class="hover:text-gray-800 font-bold">와플파티 이용약관(한국)</button>
             <span class="text-gray-300">|</span>
-            <button onclick="switchContent('privacy')" id="privacyTab" class="hover:text-gray-800 font-bold">개인정보처리방침</button>
+            <button onclick="switchContent('privacy_kr')" id="privacyTab_kr" class="hover:text-gray-800 font-bold">개인정보처리방침(한국)</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="switchContent('terms_tw')" id="termsTab_tw" class="hover:text-gray-800 font-bold">瓦芙派對使用條款(台灣)</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="switchContent('privacy_tw')" id="privacyTab_tw" class="hover:text-gray-800 font-bold">隱私權政策(台灣)</button>
           </div>
         </div>
 
-        <!-- Content -->
-        <div id="termsContent" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700">
-          <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[와플파티 이용약관]</h2>
-          <p class="mb-4"><span class="font-bold tracking-tighter">제1조 (목적)</span><br>
-            본 약관은 주식회사 다이브게임즈(이하 "회사")가 제공하는 구독계정 공유 플랫폼 "Waffle Party" (이하 "플랫폼")의 이용에 있어 
-            회사와 회원 간의 권리·의무 및 책임사항, 서비스 이용조건, 이용 절차, 광고 시청 리워드 서비스 이용에 관한 사항 등을 규정함을 목적으로 합니다.</p>
+        <!-- 한국 와플파티 이용약관  -->
+        <div id="termsContent_kr" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700">
+          <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[와플파티 이용약관(한국)]</h2>
+          <p class="mb-4">
+            본 약관은 2025년 4월1일부터 적용됩니다.<br><br>
+            <span class="font-bold tracking-tighter">제1조 (목적)</span><br>
+            본 약관은 주식회사 다이브게임즈(이하 "회사")가 제공하는 리워드 기반 구독계정 공유 플랫폼 와플파티(영문명: Waffle Party, 이하 "플랫폼")를 이용함에 있어 
+            “회사”와 “플랫폼”을 이용하는 이용자(이하 “회원”) 간의 권리·의무 및 책임사항, “플랫폼” 이용조건, 이용 절차 등 기본적인 사항을 규정함을 목적으로 합니다.
+          </p>
 
           <p class="mb-4"><span class="font-bold tracking-tighter">제2조 (약관의 게시와 개정)</span><br>
-            회사는 본 약관을 회원가입 화면 또는 플랫폼 내 고지 메뉴에 게시하며, 관련 법령에 따라 개정할 수 있습니다.</p>
+            1. “회사”는 “플랫폼”의 가입과정 또는 “플랫폼” 내 메뉴에 게시합니다. 다만, 약관의 내용은 “이용자”가 연결화면을 통하여 확인하도록 할 수 있습니다.<br>
+            2. “회사”는 관련 법령에 위반되지 않는 범위 내에서 본 약관을 개정할 수 있습니다.<br>
+            3. 약관 변경 시 적용일자로부터 7일 이전부터 적용일자와 개정 사유를 명시하여 “플랫폼”의 초기화면에 공지합니다. 다만, “플랫폼”에 대한 새로운 기능과 관련된 변경이나 법률적인 사유로 인한 변경은 사전 공지없이 즉시 개정될 수 있습니다.<br>
+            4. 공지일로부터 14일 이내에 “회원”이 명시적으로 거부하지 않은 경우, 개정 약관에 동의한 것으로 간주합니다.<br>
+            5. “회원이 “회사”에 개정한 것에 대해 동의하지 않는다는 의사를 명시적으로 표시한 경우, “회원”은 적용일자부터 “플랫폼”을 이용할 수 없으며, “플랫폼” 탈퇴를 할 수 있습니다.<br>
+          </p>
 
           <p class="mb-4"><span class="font-bold tracking-tighter">제3조 (약관의 해석)</span><br>
-            본 약관에서 정하지 않은 사항은 관계 법령, 플랫폼 내 고지된 정책 및 일반적인 상관례에 따릅니다.</p>
+            본 약관에서 정하지 않은 사항은 관계 법령이 있을 경우 그 규정을 따르며, 그렇지 않은 경우 일반적인 상관례에 따릅니다.<br>
+          </p>
           
           <p class="mb-4"><span class="font-bold tracking-tighter">제4조 (용어의 정의)</span><br>
-            플랫폼 내 주요 용어는 다음과 같습니다.<br>
-            회원 : 회사와 서비스 이용계약을 체결하고 이용하는 자<br>
-            파티 : 구독 공유를 위해 구성된 회원 집합<br>
-            파티장 : 구독 서비스를 직접 결제하여 공유하는 회원<br>
-            파티원 : 파티장에게 비용을 지불하고 공유 받는 회원<br>
-            포인트 : 광고 시청, 미션 참여 등을 통해 적립되는 플랫폼 내 재화<br>
-            광고 리워드 서비스 : 광고 시청 등 미션을 통해 포인트를 지급하는 서비스</p>
+            “플랫폼” 내부에서 사용되는 용어는 “플랫폼” 내부의 정의를 우선하여 따릅니다. 본 조에서 정하지 아니하였거나, “플랫폼” 내부의 별도 설명이 없는 경우 관계법령 및 일반 관례를 따릅니다.<br><br>
+            1. 회원 : “회사”와 “플랫폼” 이용계약을 체결하고 “회사”가 제공하는 “플랫폼”을 이용하는 이용자를 의미합니다.<br>
+            2. 비회원: 회원등록 없이 “플랫폼”에 접속한 이용자로서, 기능 이용에 일부 제한을 받습니다. 또한 플랫폼 내에 별도의 비회원 이용 메뉴가 있는 것은 아니며, “플랫폼”에 가입하지 않거나 비로그인 상태에서 회원식별이 불가능한 상태의 이용자를 말합니다.<br>
+            3. 아이디: 회원가입 시, “회원”의 식별 및 “플랫폼” 이용을 위해 등록한 이메일 형식을 말합니다.<br>
+            4. 닉네임: “플랫폼”에 “회원”의 개인정보를 노출하지 않고 타인간의 “플랫폼” 내에서 식별이 가능한 “회원”의 별칭을 말합니다. <br>
+            5. 파티 : 구독 공유를 위해 구성된 “회원” 집합을 말합니다.<br>
+            6. 파티장 : 구독 서비스를 직접 결제하여 공유하는 “회원”을 말합니다.<br>
+            7. 파티원 : 파티장에게 비용을 지불하고 공유 받는 “회원”을 말합니다.<br>
+            8. 약정의무: 파티에 속한 “회원”들이 준수해야 하는 의무사항을 말합니다.<br>
+            9. 약정기간: 파티에 속한 “회원”들이 약정의무를 준수해야 하는 유지기간을 의미합니다.<br>
+            10. 파티 시작일: 약정기간의 시작일을 의미합니다.<br>
+            11. 파티 종료일: 약정기간의 종료일을 의미합니다.<br>
+            12. 정산일: “플랫폼”에서 이용 중 파티의 파티원 결제/파티장 정산을 진행하는 날짜를 말합니다.<br>
+            13. 캐시 : 광고 시청, 미션 참여 등을 통해 적립되는 “플랫폼” 내 재화를 말합니다.<br>
+            14. 광고 리워드 서비스 : 광고 시청 등 미션을 통해 캐시를 지급하는 서비스를 말합니다.<br>
+            15. 포인트: “플랫폼” 내에서 파티원으로부터 정산금 대신 파티장의 선택으로 지급받을 수 있는 “플랫폼” 내 재화 또는 마케팅 용도로 지급받을 수 있는 별도의 재화로 유료포인트와 무료 포인트로 나뉘며, 별도의 유효기간이 존재합니다.<br>
+          </p>
 
           <p class="mb-4"><span class="font-bold tracking-tighter">제5조 (이용계약의 성립)</span><br>
-            회원가입은 소셜로그인 또는 회사가 제공하는 방법을 통해 이루어지며, 회사의 승낙으로 성립됩니다.</p>
+            이용계약은 비회원이 플랫폼에서 제공하는 가입 페이지에서 기본정보 정보입력과 “플랫폼” 이용약관에 동의한 후, 이용신청을 하고 신청한 내용을 “회사”의 승낙함으로써 체결됩니다.</p>
           
           <p class="mb-4"><span class="font-bold tracking-tighter">제6조 (이용신청의 승낙과 제한)</span><br>
-            회사는 업무상 또는 기술상 지장이 있는 경우 회원가입을 유보하거나 거절할 수 있습니다.</p>
+            1. “회사”는 이용약관에 동의한 후 이용 신청한 사용자에 대해서 원칙적으로 접수 순서에 따라 플랫폼 이용을 승낙함을 원칙으로 합니다. 다만 업무 수행상 또는 기술상 지장이 있을 경우 일정시간 가입 승인을 유보하거나 거절할 수 있습니다.<br>
+            2. “회사”는 다음 각호에 해당하는 신청에 대해서 승낙하지 않거나 사후에 이용계약을 해지할 수 있습니다.<br>
+            - “플랫폼”이 서비스를 하는 국가에서 성인의 나이가 아닌 경우<br>
+            - “플랫폼”이 서비스를 하는 국가 이외의 이용자가 회원가입을 한 경우<br>
+            - 타인의 명의를 이용 또는 도용해서 “플랫폼”을 이용하는 경우<br>
+            - 가입신청자가 본 약관에 의하여 이전에 회원자격을 상실한 적이 있는 경우<br>
+            - 허위정보를 기재하거나, 회사가 가입 시 요청한 정보를 기재하지 않고 가입한 경우<br>
+            - 부정한 용도로 “플랫폼”을 사용하고자 하는 경우 또는 이미 그렇게 한 경우<br>
+            - 이용자의 귀책사유로 인하여 승인이 불가능하거나 기타 규정한 제반사항을 위반하며 신청하는 경우<br>
+            - “회사”의 정책에 적합하지 않는 “회원”으로 판단되는 경우<br>
+            - “회원”의 이용목적이나 “플랫폼” 이용방법이 “회사”의 재산권이나 영업권을 침해하거나 침해할 우려가 있는 경우<br>
+            - 비정상적인 방법을 통하여 아이디를 대량으로 생성하는 경우</p>
           
-          <p class="mb-4"><span class="font-bold tracking-tighter">제7조 (플랫폼 제공 기능)</span><br>
-            회사는 다음의 서비스를 제공합니다.<br>
-            구독 공유 파티 생성 및 참여 기능<br>
-            공유정보 관리 기능<br>
-            광고 리워드 기능<br>
-            포인트 적립 및 사용 기능</p>
-          <p class="mb-4"><span class="font-bold tracking-tighter">제8조 (광고 리워드 서비스 이용)</span><br>
-            회원은 광고 시청, 미션 참여 등을 수행하여 포인트를 적립할 수 있으며, 광고주와의 거래에 대한 법적 관계는 회원 본인에게 있습니다.</p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제7조 (플랫폼 이용개시)</span><br>
+            1. “회사”는 “회원”의 이용신청을 승낙하면 즉시 “플랫폼” 이용을 시작할 수 있도록 합니다.<br>
+            2. “회사”는 업무상 또는 기술상의 장애로 인하여 “플랫폼” 이용을 시작할 수 없는 경우에는 공지 사항이나 저장된 연락처등을 통해 회원에게 이를 통지합니다.<br>
+          </p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제8조 (플랫폼의 제공)</span><br>
+            “플랫폼”에서 “회원”에게 제공하는 기능은 아래와 같습니다.<br>
+            - 와플파티(Waffle Party) 서비스<br>
+            - 기타 “회사”가 추가 개발하거나 다른 회사와의 제휴계약 등을 통해 “회원”에게 제공하는 일체의 서비스<br>
+          </p>
           
-          <p class="mb-4"><span class="font-bold tracking-tighter">제9조 (플랫폼 이용시간)</span><br>
-            플랫폼은 연중무휴, 24시간 제공되며, 시스템 점검 등으로 일시 중단될 수 있습니다.</p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제9조 (플랫폼의 변경 및 이용시간)</span><br>
+            1. “플랫폼”의 이용은 “회사”의 업무상 또는 기술상의 특별한 지장이 없는 한 연중무휴, 1일 24시간을 원칙으로 합니다.<br>
+            2. “회사”는 정보통신설비의 보수점검,교체 및 고장, 통신두절 또는 “회사”의 정책 및 운영의 필요상  상당한 이유가 있는 경우, “플랫폼” 내의 서비스 제공을 일시적으로 수정, 중단, 변경중단할 수 있으며, 이 경우 “회사”는 “회원”에게 공지사항 게시판 게시등으로 통지합니다. 다만, “회사”가 사전에 통지할 수 없는 부득이한 사유가 있는 경우 사후에 통지할 수 있습니다.<br>
+            3. “회사”는 “회원”과 별도로 서면계약을 체결하여 “플랫폼”의 브랜드 특성을 이용할 수 있는 명시적인 권리를 부여하지 않는 한, “회원”에게 “회사” 또는 “플랫폼”의 상호, 상표, “플랫폼”의 서비스표, 로고, 도메인 네임 및 기타 식별력있는 브랜드 특성을 이용할 수 있는 권리를 부여하지 않습니다.<br>
+            4. “회사”가 제공하는 “플랫폼”의 형태와 기능, 디자인 등은 필요한 경우 수시로 변경되거나 중단될 수 있습니다. “회사”는 이 경우 개별적인 변경에 대해서 “회원”에게 사전 통지하지 않습니다. <br>
+            5. 전항에 의해서 제공되는 “플랫폼” 내 서비스가 변경 및 중단딜 경우 무료로 제공되는 서비스에 대해서는 “회원”에게 별도로 보상하지 않습니다.<br>
+          </p>
           
           <p class="mb-4"><span class="font-bold tracking-tighter">제10조 (정보 제공 및 광고의 게재)</span><br>
-            회사는 서비스 운영을 위해 회원에게 정보를 제공하고 광고를 게재할 수 있습니다.</p>
+            1. “회사”는 “회원”이 “플랫폼” 이용 중 필요하다고 인정되는 다양한 정보를 공지사항이나 전자우편, 어플리케이션 푸시메시지(이하 “푸시메시지”)등의 방법으로 “회원”에게 제공할 수 있습니다. 다만, “회원”은 파티의 운영과 결제에 대한 메시지나 관련법에 따른 거래 관련 정보 및 고객 문의 등에 대한 답변 등을 제외하고는 언제든지 수신 거절을 할 수 있습니다.<br>
+            2. 제1항의 정보를 휴대용 통신 단말기에 의하여 전송하려고 하는 경우 “회원”의 사전 동의를 받아서 전송합니다. 다만 “회원”의 거래 관련 정보 및 고객문의 등에 대한 회신에 있어서는 제외됩니다.<br>
+            3. “회사”는 플랫폼의  운영과 관련하여 회원정보, “회원”이 입력한 정보를 활용하여 “플랫폼” 내 서비스 화면, 홈페이지, 전자 우편, 푸시메시지 등에 광고를 게재할 수 있습니다. “회원”은 “플랫폼” 이용 시 노출되는 맞춤 광고 게재에 대해 동의합니다. 또한 광고가 게재된 전자우편, 푸시등을 수신한 “회원”은 수신거절을 “회사”에게 할 수 있습니다.<br>
+            4. “회사”는 “플랫폼” 상에 게재되어 있거나 “플랫폼”을 통한 광고주의 판촉 활동에 “회원”이 참여하거나 교신 또는 거래를 함으로써 발생하는 손실과 손해에 대해 책임을 지지 않습니다.<br>
+          </p>
           
           <p class="mb-4"><span class="font-bold tracking-tighter">제11조 (회사의 의무)</span><br>
-            회사는 서비스의 안정적 제공, 회원 의견 처리, 개인정보 보호 의무를 가집니다.</p>
+            1. “회사”는 법령과 본 약관이 정하는 권리의 행사와 의무에 대해 성실히 이행하고, 계속적으로 안정적인 “플랫폼”의 제공을 위해서 최선을 다해 노력합니다.<br>
+            2. “회사”는 “회원”이 안전하게 “플랫폼”을 이용할 수 있도록 “플랫폼” 내 서비스에 적합한 개인정보보호를 위한 보안 시스템을 갖추고 운영해야 합니다.<br>
+            3. “회사”는 “플랫폼” 이용과 관련하여 “회원”이 제시한 의견이나 불만이 정당하다고 인정할 경우 이를 지체없이 처리하고 “회원”에게 결과를 통보하여야 합니다.<br>
+            4. “회사”는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 전자상거래법 등 플랫폼의 운영, 유지와 관련있는 법규를 준수합니다.<br>
+          </p>
           
           <p class="mb-4"><span class="font-bold tracking-tighter">제12조 (회원의 의무)</span><br>
-            회원은 다음 각 호의 행위를 하여서는 안됩니다.<br>
-            허위 정보 제공<br>
-            무단 정보 이용<br>
-            서비스 운영 방해<br>
-            광고 리워드 부정 이용<br>
-            기타 관련 법령 및 약관 위반</p>
+            1.”회원”은 다음 각호에 해당하는 행위를 해서는 안됩니다.<br>
+            - 이용신청 또는 회원정보 변경 시 허위 내용 등록<br>
+            - 타인의 정보도용<br>
+            - 운영자, “회사”를 사칭하거나 관련 정보를 도용<br>
+            - “회사”가 게시한 정보의 변경<br>
+            - “회사”와 기타 제3자의 저작권, 영업비밀, 특허권 등 지적 재산권에 대한 침해<br>
+            - “회사”와 다른 “회원” 및 기타 제3자를 희롤하거나, 위협하거나 명예를 손상시키는 행위<br>
+            - 해킹을 통해서 다른 사용자의 정보를 취득하는 행위<br>
+            - 기타 현행 법령에 위반되는 불법적인 행위<br>
+            2. “회사”는 “회원”이 전항에서 금지한 행위를 하는 경우, 위반행위의 경중에 따라 “플랫폼”의 이용정지/계약의 해지 등 “플랫폼” 이용제한, 수사기간에의 고발조치 등 합당한 조치를 취할 수 있습니다.<br>
+            3. “회원”은 “회사”의 명시적 사전 동의가 없는 한 “플랫폼”의 이용권한 및 기타 이용계약 상의 지위를 본인을 제외한 제3자에게 양도, 증여, 대여할 수 없으며 이를 담보로 제공할 수 없습니다.<br>
+            4. “회원”은 관계법, 이약관의 규정, 이용안내 및 “플랫폼” 내 서비스와 관련하여 공지한 주의사항, “회사”가 통지하는 사항 등을 준수하여야 하며, 기타 회사의 업무에 방해되는 행위를 하여서는 안됩니다.<br>
+            5. “회원”은 “회사”의 사전 허락없이 “회사”가 정한 이용목적과 방법에 반하여 영업/광고 활동 등을 할 수 없고, “회원”의 “플랫폼” 이용이 “회사”의 재산권, 영업권 또는 비즈니스 모델을 침해하여서는 안됩니다.<br>
+          </p>
           
-          <p class="mb-4"><span class="font-bold tracking-tighter">제13조 (이용제한 및 계약 해지)</span><br>
-            회원이 본 약관을 위반할 경우 회사는 이용제한, 계약 해지 등의 조치를 취할 수 있습니다. 회원은 언제든지 계약 해지를 요청할 수 있습니다.</p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제13조 (개인정보보호 의무)</span><br>
+            1. “회사”는 정보통신망법 등 관계 법령이 정하는 바에 따라 “회원”의 개인정보를 보호하기 위해 노력합니다. 개인정보의 보호 및 사용에 대해서는 관련법 및 “회사”의 개인정보처리방침이 적용됩니다.<br>
+            2. “회원”의 개인정보보호에 관해서는 관련 법령 및 “회사”가 정하는 개인정보취급방침에 따릅니다.<br>
+            3. “회사”는 정보통신망 이용촉진 및 정보보호등에 관한 법률 등 관계법령에 따라 “회원”의 사전동의를 얻은 경우, 동의를 받은 범위 내에서 “회원”의 개인정보를 제3자에게 제공하며, “회사”의 개인정보취급방침에 그 절차와 방법등에 대하여 상세히 기재하도록 합니다.<br>
+            4. “회사”가 “플랫폼”을 통하여 게재, 공시하는 개인정보취급방침은 본 약관의 일부를 구성하며, “회원”은 이에 동의합니다.<br>
+            5. “회사”는 플랫폼을 중단하거나 “회원”이 개인정보 제공 동의를 철회한 경우 신속하게 “회원”의 개인정보를 파기합니다. 단, 전자상거래 등에서의 소비자보호에 관한 법률 등 관련 법률에서 정하는 바에 따라 일정 정보는 보관할 수 있습니다.<br>
+            6. “회사”는 법률에 특별한 규정이 있는 경우를 제외하고는 “회원”의 별도 동의 없이 “회원”의 계정정보를 포함한 일체의 개인정보를 제3자에게 공개하거나 제공하지 아니합니다.<br>
+            7. “회사”는 향후 제공하는”플랫폼” 내 서비스에서 “회원”의 편의를 위해서 “회원”의 계정 정보를 사용할 수 있도록 링크 및 기타 방법을 제공할 수 있습니다.<br>
+          </p>
           
-          <p class="mb-4"><span class="font-bold tracking-tighter">제14조 (책임 제한)</span><br>
-            회사는 회원 간 거래, 파티 내 계정 공유, 광고 리워드 참여 등으로 인한 문제에 대해 책임을 지지 않습니다.</p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제14조 (이용제한, 중지 및 계약해지)</span><br>
+            1. “회원”은 “회사”에 언제든지 회원탈퇴를 요청할 수 있으며, “플랫폼” 내의 요청기능으로 해지의사를 통보하고 신청이 완료되면 “회사”는 이용계약을 즉시 종료합니다.<br>
+            2. “회사”는 “회원”이 본 약관을 위반하는 경우 사전통지 없이 즉시 이용계약 해지를 할 수 있습니다.<br>
+            3. 플랫폼 이용  중 발생할 수 있는 “회원”간 “플랫폼” 외적인 문제에 대해서는 “회사”가 책임을 지지 않습니다.<br>
+            4. “회원”의 아이디 및 비밀번호 관리소홀로 “회원”에게 발생한 손해나 제3자에 의한 부정이용 등으로 “회원”의 의무조항을 위반한 경우 아이디의 이용이 제한될 수 있습니다.<br>
+            5. “회사”가 본 약관의 제12조에 대한 위반 행위를 조사하는 과정에서 당해 “회원” 아이디의 특정 위반행위에 직접적으로 관련되어 있는 경우 등 다른 “회원”의 권익 보호 및 “플랫폼”의 질서유지를 위해 불가피할 경우에는 해당 아이디의 이용을 일시적으로 정지할 수 있습니다. 이에 대해 “회원”은 “플랫폼”을 통해 이의 신청을 할 수 있습니다.<br>
+            6. “회사”는 “플랫폼”의 정상적인 운영을 방해한 경우에는 사전통보 후 회원자격을 제한, 이용계약을 해지하거나 또는 기간을 정하여 “플랫폼” 이용을 중지할 수 있습니다.<br>
+            7. “회사”는 “회원”이 저작권법을 위반한 불법 프로그램의 제공 및 운영방해, 정보통신망법을 위반한 불법통신 및 해킹, 악성 프로그램의 배포, 접속권한 초과행위 등과 같이 관련법을 위한반 경우에는 즉시 영구이용정지를 할 수 있습니다.<br>
+            8. 이용이 제한된 “회원”은 “회사”가 정한 절차에 따라 이의신청을 할 수 있으며 “회사”가 그 사유를 정당하다고 인정하는 경우 “회사”는 “회원”의 “플랫폼” 이용을 즉시 재개합니다.<br>
+          </p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제15조 (환불)</span><br>
+            1. “회원”은 파티 이용권 구매 후 사용을 개시한 경우 시작한 날짜로부터 한달 이후부터 해지 및 환불이 가능합니다.<br>
+            2. “회원”은 파티 이용권을 구매 후 실제 이용하지 않은 경우 7일이내에 환불 신청이 가능합니다.<br>
+            3. “회사”의 귀책사유로 인한 “플랫폼” 중단이 있을 경우는 이용여부와 관계없이 해지 및 환불 신청을 할 수 있습니다.<br>
+            4. “회원”이 파티 이용으로 선지불한 위약금이나 보증금은 계약금 성격으로서 반환청구권이 상실되며, 이에 대한 동의를 미리 진행합니다. 단 파티 운영과 관련하여 파티 구성원에 대해 유무형의 피해를 야기하지 않는다고 판단되는 경우 반환될 수 있습니다.<br>
+            5. “회원”이 파티원으로서 지불한 파티 이용에 대한 분담금은 파티가 시작한 경우 파티 시작일을 기준으로 일할 계산되어 환불받을 수 있습니다.<br>
+            6. 파티의 실제 이용으로 처리되는 수수료는 중도 환불 시에도 환불되지 않습니다.<br>
+            7. 환불을 신청할 경우, 잔여 금액의 산식에 따라 별도의 환불 수수료가 청구되며, 환불 수수료가 환불신청 금액보다 클 경우는 환불처리가 되지 않습니다.<br>
+            8. 광고를 통해 획득한 캐시는 실제 법정화폐가 아니므로, 출금하거나, 환불되지 않습니다. 단, 회원탈퇴 시, 캐시를 포기하는 경우 캐시는 소멸됩니다.<br>
+            9. “플랫폼” 이용으로 발생한 포인트 중 유료 포인트에 한해 현금으로 출금할 수 있습니다. 다만, 특정금액 이상인 경우에만 출금이 가능하며, 회원탈퇴 시, 포인트를 포기를 동의하면 해당 포인트는 소멸됩니다.<br>
+            10. 무료로 받은 포인트는 환불되거나 출금되지 않습니다.<br>
+          </p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제16조 (손해배상)</span><br>
+            1. “회사”의 고의 또는 중대한 과실로 인하여 회원에게 손해가 발생한 경우 “회사”는 “회원”에게 실제 발생한 손해에 대해서만을 배상합니다.<br>
+            2. “회원”이 “플랫폼”을 이용함에 있어 행한 불법행위나 본 약관 위반행위로 인하여 “회사”가 당해 “회원” 이외의 제3자로부터 손해배상 청구 또는 소송을 비롯한 각종 이의 제기를 받는 경우 당해 “회원”은 자신의 책임과 비용으로 “회사”를 면책하여야 하며, “회사”가 면책되지 못한 경우 당해 “회원”은 그로 인하여 “회사”에 발생한 모든 손해를 배상하여야 합니다.<br>
+          </p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제17조 (면책사항)</span><br>
+            1. “회사”는 “회원”의 약관, “플랫폼” 이용방법 및 이용기준을 준수하지 않는 등 “회원”의 귀책사유로 인한 “플랫폼” 이용의 장애에 대해서는 책임지지 않습니다.<br>
+            2. “회사”는 “플랫폼”을 통하여 게재한 정보, 자료, 사실의 신뢰도, 정확성 등의 내용에 관하여 보증하지 않습니다.<br>
+            3. “회사”는 “회원”간 또는 “회원”과 제3자 상호간에 “플랫폼”을 매개로 하여 거래 등을 한 경우에 대하여 책임이 면제됩니다.<br>
+            4. “회사”는 무료로 제공되는 “플랫폼” 이용과 관련하여 관련법에 특별한 규정이 없는 한 책임을 지지 않습니다.<br>
+            5. “회사”는 천재지변, 전쟁,기간통신회사의 “플랫폼”의 중지, 제3자가 제공하는 오픈아이디의 인증장애, 해결이 곤란한 기술적 결함 기타 등 이에 준하는 불가항력으로 인하여 “플랫폼”을 제공할 수 없는 경우에는 “플랫폼” 제공에 관한 책임이 면제됩니다.<br>
+            6. “회원”의 컴퓨터 오류, 신상정보의 부정확한 기재, 비밀번호 관리의 소홀 등 “회원”의 귀책사유로 인해 손해가 발생한 경우에 대하여 “회사”는 책임을 지지 않습니다.<br>
+            7. “회사”는 “회원”의 컴퓨터 환경 문제나 “회사”의 관리 범위에 있지 아니한 보안 문제로 인하여 발생하는 제반 문제 또는 현재의 보안기술 수준으로 방어가 곤란한 네트워크 해킹 등 “회사”의 귀책사유 없이 발생하는 문제에 대해서 책임을 지지 않습니다.<br>
+            8. “회사”는 “플랫폼” 내 제공한 내용에 대한 중요 정보의 정확성, 내용, 완전성, 적법성, 신뢰성 등에 대하여 보증하거나 책임을 지지 않으며, 사이트의 삭제, 저장실패, 잘못된 인도, 정보 제공에 대한 궁극적인 책임을 지지 않습니다.<br>
+            9. “회사”는 “회원” 상호간 또는 “회원”과 제3자 상호 간에 “플랫폼”을 매개로 발생한 이용약관에 명시되어 있지 않은 분쟁에 대해 개입할 의무가 없으며 이로 인한 손해를 배상할 책임도 없습니다.<br>
+            10. “회사”는 “회원”이 “플랫폼”을 이용하여 기대하는 효용을 얻지 못한 것에 대하여 책임을 지지 않으며 “플랫폼”에 대한 취사 선택 또는 이용으로 발생하는 손해 등에 대하여 책임이 면제됩니다.<br>
+          </p>
           
-          <p class="mb-4"><span class="font-bold tracking-tighter">제15조 (분쟁 해결 및 관할법원)</span><br>
-            본 약관은 대한민국 법령에 따라 해석되며, 회사와 회원 간의 분쟁은 서울중앙지방법원을 전속 관할 법원으로 합니다.</p>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제18조 (준거법 및 재판관할)</span><br>
+            1. “회사”와 “회원”간 제기된 소송에는 대한민국법을 준거법으로 합니다.<br>
+            2. “회사”와 “회원”간 발생한 분쟁에 관한 소송은 민사소송법 상의 관할법원에 제소합니다.<br>
+          </p>
         </div>
-        
-        <div id="privacyContent" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700">
-          <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[개인정보 처리방침]</h2>
-          <p class="mb-4"><span class="font-bold tracking-tighter">제1조 (총칙)</span><br>
-            주식회사 다이브게임즈(이하 “회사”)는 회원의 개인정보 보호를 매우 중요하게 생각하며, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관련 법령을 준수하고 있습니다. 회사는 회원의 개인정보를 보호하기 위하여 다음과 같은 개인정보처리방침을 수립·공개합니다.
-            본 방침은 Waffle Party 서비스(이하 “서비스”) 이용자에게 적용됩니다.</p>
 
-          <p class="mb-4"><span class="font-bold tracking-tighter">제2조 (개인정보의 수집 및 이용 목적)</span><br>
-            회사는 다음의 목적을 위해 최소한의 개인정보를 수집·이용합니다.<br>
-            서비스 제공 및 회원 관리<br>
-            회원 가입의사 확인, 본인 식별·인증, 서비스 제공, 계약이행, 이용자 식별, 불법·부정 이용 방지, 문의 대응 등<br>
-            결제 처리<br>
-            서비스 이용에 따른 요금 결제 및 환불<br>
-            리워드 광고 서비스 제공<br>
-            광고 시청 미션 제공, 포인트 적립·사용, 이용자 편의 제공<br>
-            마케팅 및 광고 활용<br>
-            신규 서비스 안내, 이벤트 제공, 서비스 개선, 통계 및 분석</p>
 
-          <p class="mb-4"><span class="font-bold tracking-tighter">제3조 (수집하는 개인정보 항목 및 방법)</span><br>
-            회사는 다음과 같은 개인정보를 수집할 수 있습니다.<br>
-            회원 가입 시<br>
-            필수: 휴대전화 번호, 이메일 주소, 이름, 생년월일, 성별, 로그인 ID, 소셜 로그인 정보 (Apple, Google, Kakao 등)<br>
-            서비스 이용 과정에서 자동으로 수집되는 정보<br>
-            접속 IP, 쿠키, 접속 일시, 서비스 이용 기록, 광고 시청 기록, 포인트 적립 및 사용 기록<br>
-            유료 서비스 이용 시<br>
-            결제 정보 (신용카드번호, 계좌정보 등)<br>
-            리워드 출금 요청 시<br>
-            본인 명의 계좌정보<br>
-            고객 문의, 이벤트 참여 시<br>
-            이름, 이메일, 연락처</p>
+        <!--한국 개인정보처리방침-->
+        <div id="privacyContent_kr" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700 font-['Noto_Sans_KR']">
+          <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[개인정보 처리방침-한국]</h2>
+          <p class="mb-4">
+            본 개인정보처리방침은 2025년 4월 1일부터 적용됩니다.<br><br>
+            주식회사 다이브게임즈(이하 “회사”)는 회사가 운영하는 와플파티(Waffle Party) 서비스(이하 “플랫폼”)를 이용하는 이용자의 개인정보를 매우 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령을 준수하고 있습니다. 본 방침은 회사가 어떤 정보를 수집하고, 어떤 목적으로 사용하며, 어떻게 관리·보호하는지에 대해 안내드립니다.<br>
+          </p>
 
-          <p class="mb-4"><span class="font-bold tracking-tighter">제4조 (개인정보의 보유 및 이용기간)</span><br>
-            회사는 개인정보 수집·이용 목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 다만, 관련 법령에 따라 일정 기간 보관해야 하는 정보는 아래와 같습니다.<br>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제1조 (개인정보의 수집 및 이용 목적)</span><br>
+              회사는 다음과 같은 목적으로 개인정보를 수집 및 이용합니다. 개인정보는 다음의 목적 이외의 용도로는 이용되지 않습니다.<br><br>
+              1. 회사의 서비스 회원가입 및 관리<br>
+              회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 중복가입 확인, 불량회원의 서비스 부정이용 방지, 비인가 사용방지, 민원 및 고충처리 , 고지사항 전달, 19세미만 이용자 가입 방지, 서비스 이용 시 발생할 수 있는 분쟁조정을 위한 기록보존<br><br>
+              2. 재화 또는 서비스 제공<br>
+              서비스 제공, 광고 시청 보상, 본인인증, 연령인증, 구매/요금결제/정산, 유료서비스 이용에 따른 과금, 요금 추심<br><br>
+              3. 마케팅 및 광고에의 활용(이용자 동의 시)<br>
+              신규 서비스 개발, 맞춤형 서비스 제공, 통계 분석, 이벤트 및 광고성 정보 제공, 접속 빈도 파악, 이용자의 서비스 이용 통계 <br>
+            </p>
+
+            <p class="mb-4"><span class="font-bold tracking-tighter">제2조 (개인정보 수집 범위 및 방법)</span><br>
+              회사는 서비스 제공을 위해 다음과 같은 개인정보를 수집합니다.<br><br>
+              1. 회원가입 시<br>
+              필수: 로그인 ID(이메일), 암호화된 비밀번호, 연계정보(CI), 중복확인정보(DI)<br>
+              * SNS 연동 가입 시 제공받는 항목: 이메일 (카카오, 네이버, 구글, 애플)<br><br>
+              2. 유료 서비스 이용 시<br>
+              필수: 로그인 ID, 휴대전화번호, 성별, 생년월일, 이름, 기기 정보(모델명, OS, 광고 ID), 접속 일시, 서비스 이용기록, 쿠키, IP주소, 광고 시청 기록, 결제 정보(신용카드정보, 은행계좌정보, 결제기록), 본인이 입력하는 생년월일(휴대폰 본인인증이 어려운 국가에서 성인 인증으로 활용)<br><br>
+              3. 마케팅 및 광고 활용 시<br>
+              필수항목: 로그인ID, 성별, 생년월일, 이름, 서비스 이용기록, 결제기록<br><br>
+              4. 자동수집정보<br>
+              서비스 이용 과정에서 단말기 정보, 접속 일시, 이용 기록, 광고 식별자 등<br><br>
+            </p>
+
+          <p class="mb-4"><span class="font-bold tracking-tighter">제3조 (개인정보 보유 및 이용 기간)</span><br>
+            회사가 수집한 회원의 개인정보는 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기되나, 아래 각 항목에 해당하는 경우에는 명시한 기간 동안 보관할 수 있으며, 그 외 다른 목적으로는 사용하지 않습니다.<br><br>
+            1. 회원의 정보 관리<br>
+            회원의 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다. 회원이 회원탈퇴를 하거나 개인정보 허위 기재로 인해 회원ID 삭제처분을 받은 경우 수집된 개인정보는 완전히 삭제되며, 어떠한 용도로도 이용할 수 없도록 처리됩니다. 다만, 계정도용으로 의심되거나, 민원접수를 통해 계정도용을 주장하는 경우, 해당 건에 대해서는 처리가 완료되는 시점까지 일시적으로 위의 삭제원칙에서 예외로 합니다.
+            반대급부로 명의도용이 발생하여 원치 않는 서비스 이용이 확인될 경우, 즉시 계정 삭제를 진행합니다. 또한 본인확인을 위해 제출받은 신분증 사본은 본인확인 후, 즉시 파기합니다. 그러지 아니한 일반회원의 탈퇴는 회원탈퇴 신청 후 180일까지 보관됩니다.<br><br>
+            2. 결제 및 정산 기록<br>
+            재화 또는 서비스 제공과 관련한 개인정보는 수집/이용에 관한 동의일로부터 5년까지 위의 이용목적을 위하여 보유/이용됩니다.<br><br>
+            3. 고객문의 및 민원처리<br>
+            고객문의 및 민원처리를 위한 개인정보 보관은 관련 법령에 따라 3년간 유지됩니다.<br><br>
+            3.마케팅 및 광고 활용<br>
+            마케팅 및 광고 활용과 관련한 개인업보는 수집/이용에 관한 동의일로부터 30일까지 위 이용목적으로 위하여 보유/이용됩니다.<br><br>
             <table class="w-full border border-gray-400">
               <tr>
-                <td class="border border-gray-400 pl-3">보유 정보</td>
-                <td class="border border-gray-400 pl-3">보유 기간</td>
-                <td class="border border-gray-400 pl-3">근거 법령</td>
+                <td class="border border-gray-400 pl-3">항목</td>
+                <td class="border border-gray-400 pl-3">보유 및 이용기간</td>
+                
               </tr>
               <tr>
-                <td class="border border-gray-400 pl-3">계약, 청약철회, 대금결제, 서비스 이용 기록</td>
-                <td class="border border-gray-400 pl-3">5년</td>
-                <td class="border border-gray-400 pl-3">전자상거래법</td>
+                <td class="border border-gray-400 pl-3">회원가입 및 서비스 이용 관련 정보</td>
+                <td class="border border-gray-400 pl-3">회원 탈퇴 후 180일까지</td>
+                
               </tr>
               <tr>
-                <td class="border border-gray-400 pl-3">소비자 불만 또는 분쟁처리에 관한 기록</td>
-                <td class="border border-gray-400 pl-3">3년</td>
-                <td class="border border-gray-400 pl-3">전자상거래법</td>
+                <td class="border border-gray-400 pl-3">결제 및 정산 기록</td>
+                <td class="border border-gray-400 pl-3">5년(전자상거래 법 등 관련 법령)</td>
+                
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">고객 문의 및 민원 처리</td>
+                <td class="border border-gray-400 pl-3">3년(소비자보호법 등 관련 법령)</td>
+                
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">광고 및 마케팅 활용 목적</td>
+                <td class="border border-gray-400 pl-3">수집 후 30일 또는 동의 철회 시까지</td>
+                
+              </tr>
+            </table>
+            <br><br>
+            단, 관련 법령에 따라 일정 기간 보관이 필요한 경우 해당 법령에 따라 보유됩니다.(아래 표)<br>
+             <table class="w-full border border-gray-400">
+              <tr>
+                <td class="border border-gray-400 pl-3">항목</td>
+                <td class="border border-gray-400 pl-3">보유기간 및 관련법령</td>
+                
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">계약 또는 청약철회 등에 관한 기록</td>
+                <td class="border border-gray-400 pl-3">5년(전자상거래 등에서의 소비자보호에 관한 법률)</td>
+                
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">대금 결제 및 재화의 공급에 관한 기록</td>
+                <td class="border border-gray-400 pl-3">5년(전자상거래 등에서의 소비자보호에 관한 법률)</td>
+                
+              </tr>
+              <tr>
+                <td class="border border-gray-400 pl-3">소비자의 불만 또는 분쟁처리에 대한 기록</td>
+                <td class="border border-gray-400 pl-3">3년(전자상거래 등에서의 소비자보호에 관한 법률)</td>
+                
               </tr>
               <tr>
                 <td class="border border-gray-400 pl-3">표시, 광고에 관한 기록</td>
-                <td class="border border-gray-400 pl-3">6개월</td>
-                <td class="border border-gray-400 pl-3">전자상거래법</td>
+                <td class="border border-gray-400 pl-3">1년(전자상거래 등에서의 소비자보호에 관한 법률)</td>
+                
               </tr>
               <tr>
-                <td class="border border-gray-400 pl-3">접속 로그, 접속 IP</td>
-                <td class="border border-gray-400 pl-3">1년</td>
-                <td class="border border-gray-400 pl-3">통신비밀보호법</td>
+                <td class="border border-gray-400 pl-3">웹사이트 방문기록</td>
+                <td class="border border-gray-400 pl-3">1년(통신비밀보호법)</td>
+             
               </tr>
-            </table><br>
+            </table>
+            <br><br>
 
-            <p class="mb-4"><span class="font-bold tracking-tighter">제5조 (개인정보의 제3자 제공)</span><br>
-              회사는 이용자의 사전 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 단, 법령의 규정에 의거하거나 회원이 사전 동의한 경우, 서비스 제공을 위해 필요한 범위 내에서만 제공됩니다.<br>
+          </p>
 
-            <p class="mb-4"><span class="font-bold tracking-tighter">제6조 (개인정보의 처리 위탁)</span><br>
-              <table class="w-full border border-gray-400">
-                <tr>
-                  <td class="border border-gray-400 pl-3">수탁업체</td>
-                  <td class="border border-gray-400 pl-3">위탁업무</td>
-                </tr>
-                <tr>
-                  <td class="border border-gray-400 pl-3">NICE평가정보㈜, 다날㈜</td>
-                  <td class="border border-gray-400 pl-3">본인 인증 서비스</td>
-                </tr>
-                <tr>
-                  <td class="border border-gray-400 pl-3">페이플㈜</td>
-                  <td class="border border-gray-400 pl-3">결제 대행 서비스</td>
-                </tr>
-                <tr>
-                  <td class="border border-gray-400 pl-3">아마존 AWS</td>
-                  <td class="border border-gray-400 pl-3">데이터 저장 및 서버 운영</td>
-                </tr>
-                <tr>
-                  <td class="border border-gray-400 pl-3">Google, Amplitude</td>
-                  <td class="border border-gray-400 pl-3">사용자 데이터 분석</td>
-                </tr>
-                <tr>
-                  <td class="border border-gray-400 pl-3">채널코퍼레이션</td>
-                  <td class="border border-gray-400 pl-3">고객 상담 시스템 운영</td>
-                </tr>
-                 <tr>
-                  <td class="border border-gray-400 pl-3">네이버클라우드㈜</td>
-                  <td class="border border-gray-400 pl-3">SMS, 알림톡 발송 서비스</td>
-                </tr>
-              </table><br>
-              
-            <p class="mb-4"><span class="font-bold tracking-tighter">제7조 (개인정보의 파기)</span><br>
-              회사는 개인정보 보유기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 정보를 파기합니다.
-              파기 절차 및 방법은 다음과 같습니다.<br>
-              파기 절차: 개인정보는 내부 방침 및 관련 법령에 따라 일정 기간 저장된 후 삭제됩니다.<br>
-              파기 방법: 전자적 파일은 복구 불가능한 방법으로 삭제하며, 종이 문서는 분쇄기로 파기합니다.<br>
+          <p class="mb-4"><span class="font-bold tracking-tighter">제4조 (개인정보의 제3자 제공)</span><br>
+            회사는 원칙적으로 이용자의 개인정보를 외부에 제공하지 않으며, 아래의 경우에만 예외적으로 제공할 수 있습니다.<br><br>
+            1.  이용자의 사전 동의를 받은 경우<br>
+            2. 서비스 제공에 따른 요금 정산을 위하여 필요한 경우<br>
+            3. 법령에 따른 요청에 따라 제공이 필요한 경우(수사기관, 법원 등)<br>
+            4. 통계작성, 학술연구 등 특정 개인을 식별할 수 없는 형태로 제공하는 경우<br>            
+            5. 영업의 전부 또는 일부를 양도하거나, 합병·상속 등으로 서비스 제공자의 권리·의무가 이전되는 경우<br><br>
+            향후 광고 시청 보상형 서비스 제공을 위해 광고 사업자에게 일부 개인정보(광고 ID 등)가 제공될 수 있으며, 이 경우 사전에 별도 동의를 받은 후 제공할 예정입니다.<br><br>
+          </p>
 
-            <p class="mb-4"><span class="font-bold tracking-tighter">제8조 (이용자의 권리)</span><br> 
-              회원은 언제든지 개인정보 열람, 정정, 삭제, 처리 정지 요청을 할 수 있습니다. 권리 행사는 서비스 내 문의 기능, 이메일, 고객센터를 통해 가능합니다.<br>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제5조 (개인정보의 처리의 위탁)</span><br>
+              회사는 원활한 서비스 제공을 위해 개인정보 처리 업무를 외부 업체에 위탁할 수 있습니다.
+              현재 회사는 플랫폼 서비스의 공식 론칭을 위한 준비 단계로, 개인정보 위탁업체가 확정되지 않았습니다.
+               현재 테스트 목적으로 일부 수탁업체를 검토 중이며, 수탁업체가 확정되는 경우, 위탁 목적·업무 범위·보유 및 이용 기간 등을 본 방침을 통해 고지하고 이용자의 동의를 받은 후 위탁 처리를 진행할 예정입니다.<br><br>
+            </p>
 
-            <p class="mb-4"><span class="font-bold tracking-tighter">제9조 (개인정보 보호를 위한 안전성 확보조치)</span><br>
-              회사는 개인정보 보호를 위하여 다음과 같은 조치를 취하고 있습니다.<br>
-              개인정보 처리 직원 최소화 및 교육<br>
-              개인정보 암호화<br>
-              해킹 및 바이러스 등 침해 방지 시스템 운영<br>
-              접속 기록의 보관 및 위·변조 방지<br>
-              물리적 보관 장소의 출입 통제<br>
-
-            <p class="mb-4"><span class="font-bold tracking-tighter">제10조 (온라인 맞춤형 광고 서비스)</span><br>
-              회사는 서비스 운영을 위해 회원의 서비스 이용 기록, 광고 시청 기록, 포인트 적립 내역 등을 활용하여 맞춤형 광고를 제공할 수 있습니다.<br>
-              
-            <p class="mb-4"><span class="font-bold tracking-tighter">제11조 (개인정보 보호책임자)</span><br>
-              회사는 개인정보 처리에 대한 책임자를 지정하여 이용자의 문의 및 고충 처리를 담당합니다.<br>
-              개인정보 보호책임자: 박정호<br>
-              이메일: privacy@divvegames.com<br>
-              연락처: 010-2949-3077<br>
-
-            <p class="mb-4"><span class="font-bold tracking-tighter">제12조 (개인정보 처리방침의 변경)</span><br>
-              본 방침은 법령 및 회사 정책에 따라 변경될 수 있으며, 변경 시 사전 고지 후 시행합니다.<br>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제6조 (개인정보의 파기 절차 및 방법)</span><br>
+              회사는 개인정보 보유기간이 경과하거나 처리 목적이 달성된 경우와 같이 개인정보가 불필요하게 되었을 때는 지체 없이 해당 개인정보를 파기합니다.<br><br>
+              1. 파기절차: <br>
+              - 개인정보의 수집 및 이용 목적이 달성된 후 내부 방침 및 기타 관련 법령에 따라  일정기간 동안 저장 후 회사의 개인정보보호 책임자의 승인을 받아 삭제하거나 파기진행합니다.<br><br>
+              2. 파기방법: <br>
+              - 전자적 파일: 복구가 불가능한 기술적 방법으로 삭제<br>
+              - 종이 문서: 분쇄 또는 소각하여 파기<br><br>              
+            </p>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제7조 (YouTube API 서비스 이용 안내)</span><br>
+              회사는 플랫폼 내 일부 기능 제공을 위해 Google LLC가 제공하는 YouTube API 서비스를 이용하고 있으며, YouTube API 서비스 약관 및 Google 개인정보처리방침을 준수하고 있습니다.<br><br>
+              1. 수집·이용하는 정보<br>
+              회사는 YouTube API를 통해 이용자의 YouTube 채널명, 구독자 수, 동영상 수, 조회수, 동영상 목록 등의 정보를 수집할 수 있습니다.<br><br>
+              2. 수집한 정보의 이용 목적<br>
+              수집된 정보는 플랫폼 내 콘텐츠 제공, 콘텐츠 추천, 통계 분석, 이용자 맞춤 서비스 제공 등의 목적으로 활용됩니다.<br><br>
+              3. API 권한 철회 방법<br>
+              이용자는 <a href="https://myaccount.google.com/permissions" style="color: blue; text-decoration: underline;">Google 계정 관리 페이지</a>를 통해 회사의 YouTube API 접근 권한을 철회할 수 있습니다.<br><br>
+              4. YouTube 관련 정책 안내<br>
+              - <a href="https://www.youtube.com/t/terms" style="color: blue; text-decoration: underline;">YouTube 서비스 약관</a><br>
+              - <a href="https://policies.google.com/privacy" style="color: blue; text-decoration: underline;">Google 개인정보처리방침</a><br>
+              - <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" style="color: blue; text-decoration: underline;">YouTube API 서비스 이용약관</a><br><br>
+            </p>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제8조 (개인정보 자동 수집 장치의 설치·운영 및 거부)</span><br> 
+              회사는 이용자에게 맞춤형 서비스를 제공하기 위해 쿠키(cookie)를 사용할 수 있습니다.<br><br>
+              - 쿠키 사용 목적: 이용자의 방문 기록, 선호 설정 등을 활용한 맞춤형 콘텐츠 제공<br>
+              - 쿠키 설정 변경 방법: 웹 브라우저 설정을 통해 쿠키 저장 거부 또는 삭제 가능<br>
+              - 쿠키 거부 시 일부 서비스 이용에 제한이 있을 수 있습니다.<br><br>
+            </p>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제9조 (정보주체의 권리와 행사 방법)</span><br>
+              회원은 언제든지 자신의 개인정보에 대한 권리를 행사할 수 있습니다.<br><br>
+              1. 개인정보 열람, 정정, 삭제, 처리 정지 요청<br>
+              2. 회원 탈퇴 또는 개인정보 수집·이용 동의 철회 요청<br>
+              3. 법정대리인을 통한 요청 시 위임장 등 증빙 자료 제출<br><br>
+              권리 행사 방법: 플랫폼 내 고객센터, 이메일, 서면 등 <br>
+              회사는 회원의 권리 행사 요청에 대해 지체 없이 처리하겠습니다.<br><br>
+            </p>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제10조 (개인정보의 안전성 확보 조치)</span><br>
+              회사는 개인정보 보호를 위해 다음과 같은 안전성 확보 조치를 시행하고 있습니다.<br><br>
+              1. 내부관리계획의 수립 및 시행<br>
+              2. 해킹, 컴퓨터 바이러스 등으로부터 보호를 위한 보안 프로그램 설치 및 점검<br>
+              3. 개인정보의 암호화 저장<br>
+              4. 개인정보처리시스템 접속 기록의 최소 6개월 이상 보관 및 위·변조 방지<br>
+              5. 개인정보 접근권한의 제한 및 관리<br>
+              6. 개인정보가 저장된 물리적 보관 장소에 대한 출입통제<br><br>
+            </p> 
+            <p class="mb-4"><span class="font-bold tracking-tighter">제11조 (개인정보 보호책임자 안내)</span><br>
+              회사는 개인정보 처리에 관한 업무를 총괄하여 책임지고 있으며, 아래와 같은 개인정보 보호책임자를 지정합니다.<br>
+              개인정보보호책임자: 박정호<br>
+              이메일: dolseda@divvegames.com<br>
+              담당 부서: 정보보안팀<br>
+              개인정보 보호 관련 문의, 불만처리, 피해구제 요청은 위 연락처를 통해 가능합니다.<br><br>
+            </p>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제12조 (권익침해 구제 방법)</span><br>
+              회원은 개인정보 침해와 관련하여 아래 기관을 통해 상담 및 구제를 요청할 수 있습니다.<br><br>
+              개인정보침해신고센터: <a href="privacy.kisa.or.kr" style="color: blue; text-decoration: underline;">privacy.kisa.or.kr</a> / ☎ 118<br>
+              개인정보분쟁조정위원회: <a href="www.kopico.go.kr" style="color: blue; text-decoration: underline;">www.kopico.go.kr</a> / ☎ 1833-6972<br>
+              대검찰청 사이버범죄수사단: <a href="www.spo.go.kr" style="color: blue; text-decoration: underline;">www.spo.go.kr</a> / ☎ 1301<br>
+              경찰청 사이버범죄 신고시스템: <a href="www.police.go.kr" style="color: blue; text-decoration: underline;">www.police.go.kr</a> / ☎ 182<br><br>
+            </p>
+            <p class="mb-4"><span class="font-bold tracking-tighter">제13조 (개인정보처리방침 변경에 대한 고지)</span><br>
+              본 개인정보처리방침은 2025년 4월 1일부터 적용됩니다.내용 변경 시 최소 7일 전부터 플랫폼 내 공지사항을 통해 안내하며, 이용자에게 불리한 내용의 변경 시에는 최소 30일 전 사전 고지하겠습니다.<br><br>
+            </p>
         </div>
+        
+    <!-- 대만 이용액관 -->
+    <div id="termsContent_tw" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700 font-['Noto_Sans_TC']">
+      <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">Waffle Party 服務條款</h2>
+      <p class="mb-4">
+        生效日期：2025年4月1日<br<br>
+        歡迎您使用由 Divvegames股份有限公司（以下簡稱「我們」）所提供的 Waffle Party（以下簡稱「本平台」）服務。為保障您的權益，請您在使用本平台前，詳閱以下服務條款（以下簡稱「本條款」）。當您註冊成為本平台會員或使用本平台服務時，即視為您已閱讀、瞭解並同意遵守本條款。<br><br>
+        <span class="font-bold tracking-tighter">
+          第一條（適用範圍與目的</span>
+          <br>
+          本條款規範「我們」與使用本平台之會員（以下簡稱「您」）間之權利與義務，並說明本平台服務內容、使用條件、使用流程及其他相關事項。<br>
+      </p>
+
+      <p class="mb-4"><span class="font-bold tracking-tighter">第二條（定義）</span><br>
+        1. 會員：指與「我們」締結本平台使用契約，並完成註冊程序之用戶。<br>
+        2. 非會員：指未完成會員註冊，僅瀏覽或使用本平台部分功能之用戶。<br>
+        3. 帳號（ID）：指會員註冊時所提供之電子郵件地址，用於辨識身份及登入本平台。<br>
+        4. 暱稱：指會員於本平台內可辨識身份之別稱，避免洩露個人資訊。<br>
+        5. 派對：指為進行訂閱帳號共享而由會員組成之群體。<br>
+        6. 派對長：指直接支付訂閱費用並提供共享服務之會員。<br>
+        7. 派對員：指向派對長支付費用後，參與共享之會員。<br>
+        8. 約定義務：指派對內會員應遵守之義務事項。<br>
+        9. 約定期間：指派對內會員應履行約定義務之期間。<br>
+        10. 派對開始日：指約定期間之起始日。<br>
+        11. 派對結束日：指約定期間之終止日。<br>
+        12. 結算日：指本平台進行派對員付款與派對長結算之日期。<br>
+        13. 現金積點（Cash）：指會員透過觀看廣告、完成任務等方式於本平台累積之虛擬財產。<br>
+        14. 廣告回饋服務：指會員觀看廣告或參與任務以獲得現金積點之服務。<br>
+        15. 點數（Point）：指會員於本平台內可作為派對費用支付或行銷用途之虛擬財產，分為付費點數與免費點數，並設有有效期限。<br>
+      </p>
+
+      <p class="mb-4"><span class="font-bold tracking-tighter">第三條（條款變更）</span><br>
+        我們有權於不違反相關法令之範圍內，修改本條款內容，並將變更事項於本平台公告。條款變更後，若您於公告日起14日內未表示異議，視為同意變更後條款。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第四條（帳號註冊與管理）</span><br>
+        1. 您須提供正確且完整之個人資料完成註冊程序。<br>
+        2. 您應妥善保管帳號與密碼，並對透過該帳號進行之所有行為負責。<br>
+        3. 未經我們書面同意，您不得將帳號轉讓、出借或提供第三人使用。<br>
+      </p>
+
+      <p class="mb-4"><span class="font-bold tracking-tighter">第五條（服務內容）</span><br>
+        本平台提供以下服務內容：<br>
+        1. Waffle Party 訂閱帳號共享服務。<br>
+        2. 我們新增或經第三方合作提供之其他相關服務。<br>
+     </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第六條（服務使用限制與終止）</span><br>
+        1. 您得隨時透過本平台申請退會，申請完成後我們將終止與您的使用契約。<br>
+        2. 若您違反本條款、法令規定或有妨害本平台正常營運之行為，我們得停止或終止您的會員資格，且無需另行通知。<br>
+        3. 因不可抗力、系統維護、技術問題或其他必要事由，我們得暫停或終止全部或部分服務，並於本平台公告。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第七條（資訊提供與廣告）</span><br>
+        1. 我們得透過電子郵件、推播訊息或平台公告，向您提供服務相關資訊或行銷內容。<br>
+        2. 您可隨時選擇拒絕接收行銷訊息，但服務通知與法定必要資訊不在此限。<br>
+        3. 我們得於本平台或其他媒體刊登廣告，對於您因該廣告而與第三方發生之交易或爭議，我們不負責任。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第八條（個人資料保護）</span><br>
+        1. 我們將依《個人資料保護法》及相關法令，妥善保護您的個人資料，僅於提供服務所需範圍內使用。<br>
+        2. 個人資料處理之詳細內容，請參閱本平台公告之「隱私權政策」。<br>
+        3. 除法令另有規定或經您同意外，我們不會將您的個人資料提供予第三方。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第九條（智慧財產權）</span><br>
+        本平台所有內容，包括但不限於文字、圖片、標誌、商標、軟體等，其智慧財產權均屬我們或合法權利人所有，未經授權，您不得擅自使用、修改、散布、發行或公開展示。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十條（會員義務）</span><br>
+        您不得從事以下行為：<br>
+        1. 登錄虛假資料或冒用他人資訊。<br>
+        2. 假冒我們或第三方，散布不實資訊。<br>
+        3. 未經授權修改本平台內容。<br>
+        4. 侵害本公司或第三方之智慧財產權或其他權益。<br>
+        5. 妨害本平台正常營運或其他違法行為。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十一條（退款政策）</span><br>
+        1. 您於購買派對使用權並開始使用後，得於使用日起滿一個月後申請解約與退款。<br>
+        2. 未開始使用者，得於購買日起7日內申請退款。<br>
+        3. 因我們責任導致服務中斷時，您得申請退款。<br>
+        4. 預先支付之違約金或保證金除特別情形外不予退還。<br>
+        5. 已支付之費用將依實際使用期間比例退款。<br>
+        6. 實際使用產生之手續費不予退還。<br>
+        7. 退款時將酌收手續費，若手續費超過退款金額，則不予退款。<br>
+        8. 廣告回饋所得之現金積點不得提領或退款，退會時積點自動銷除。<br>
+        9. 付費點數達特定金額可申請提領，退會時未提領點數視為放棄。<br>
+        10. 免費點數不得退款或提領。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十二條（損害賠償）</span><br>
+        1. 因我們之故意或重大過失，致使您遭受損害時，我們僅負賠償實際損害之責任。<br>
+        2. 您因違法或違反本條款，致我們遭第三方索賠或受損時，應自負責任並賠償我們因此所受一切損失。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十三條（免責聲明）</span><br>
+        1. 因您自身責任或違反本條款所致之損害，我們不負責。<br>
+        2. 我們不保證本平台資訊之正確性、完整性或適用性。<br>
+        3. 您與其他會員或第三方間之交易或糾紛，我們不負任何責任。<br>
+        4. 因不可抗力、系統故障、駭客攻擊等非我們可歸責事由，導致服務中斷或資料遺失，我們不負賠償責任。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十四條（服務終止）</span><br>
+        您可隨時申請退會並終止本條款。我們得依本條款規定或必要時，暫停或終止您之會員資格及服務使用權。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十五條（條款之解釋與適用）</span><br>
+        本條款如有未盡事宜，依中華民國（台灣）法律及一般交易慣例處理。<br>
+      </p>
+
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十六條（準據法與管轄法院）</span><br>
+        本條款之解釋與適用，均依中華民國（台灣）法律為準據法。若您與我們因本條款或本平台服務發生任何爭議，雙方同意以台灣台北地方法院為第一審專屬管轄法院。此外，若本條款部分條文經法院認定為無效，其餘條款仍繼續有效。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十七條（條款之完整性）</span><br>
+        本條款構成您與我們之完整協議，並取代雙方先前就本平台服務所為之所有口頭或書面協議、溝通或了解。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十八條（條款之分割性）</span><br>
+        若本條款任何條文被認定為無效、違法或不可執行，該條文應在必要範圍內予以刪除，不影響其餘條文之有效性與可執行性。<br>
+      </p>  
+        
+      <p class="mb-4"><span class="font-bold tracking-tighter">第十九條（條款之讓與）</span><br>
+        您不得將本條款下之權利或義務轉讓、移轉或轉授予第三人；我們得於不影響您權益之前提下，將本條款下之權利與義務轉讓予關係企業或繼受公司。<br>
+      </p>
+      
+      <p class="mb-4"><span class="font-bold tracking-tighter">第二十條（條款之優先效力）</span><br>
+        本條款以中文繁體版本為準，若經翻譯為其他語言版本，僅供參考，解釋上以中文繁體版本為準。<br>
+      </p>
+
+    </div>
+<!--대만 개인정보처리방침-->
+<div id="privacyContent_tw" class="p-10 h-[50vh] md:h-[60vh] lg:h-[70vh] w-full overflow-y-auto mb-6 hidden text-xs sm:text-sm md:text-base leading-relaxed tracking-tighter text-gray-700" style="font-family: 'Noto Sans TC', sans-serif;">
+  <h2 class="font-bold mb-[50px] sm:mb-[60px] md:mb-[80px] text-[20px] sm:text-[24px] md:text-[28px] text-center tracking-tighter">[華夫派對隱私權政策]</h2>
+  <p class="mb-4">
+    本隱私權政策自2025年4月1日起適用。<br><br>
+    DIVVE Games股份有限公司（以下稱「本公司」）非常重視用戶的個人資料保護，並依據中華民國「個人資料保護法」及相關法規，制定本政策以說明本公司如何蒐集、使用、管理與保護您的個人資料。<br><br>
+  </p>
+
+  <p class="mb-4"><span class="font-bold tracking-tighter">第1條（個人資料的蒐集與利用目的）</span><br>
+    本公司基於下列目的蒐集並利用您的個人資料，除另有說明外，不會用於其他用途：<br><br>
+    一、會員註冊與管理<br>
+     確認會員註冊意願、會員身份識別與驗證、避免重複註冊、防止不當使用與未經授權之存取、客訴處理、通知事項傳遞、避免19歲以下未成年人註冊、保存使用紀錄以因應爭議處理需求。<br><br>
+    二、商品或服務提供<br>
+     提供服務、廣告觀看獎勵、身份驗證、年齡確認、購買及費用支付與結算、付費服務之計費與收款。<br><br>
+    三、行銷與廣告推廣（經用戶同意）<br>
+     開發新服務、提供個人化服務、統計分析、行銷推播與活動資訊提供、分析平台使用行為。<br><br>
+  </p>
+
+  <p class="mb-4"><span class="font-bold tracking-tighter">第2條（個人資料的蒐集項目與方式）</span><br>
+    本公司所蒐集的個人資料項目如下：<br><br>
+    一、會員註冊時<br>
+    必要項目：登入ID（電子郵件）、加密密碼、連結資訊（CI）、重複確認資訊（DI）<br>
+    SNS登入時蒐集：電子郵件（Line、Google、Apple）<br><br>
+    二、使用付費服務時<br>
+    必要項目：登入ID、手機號碼、姓名、性別、出生日期、裝置資訊（型號、作業系統、廣告ID）、連線時間、服務使用紀錄、Cookie、IP位址、廣告觀看紀錄、付款資訊（信用卡資料、銀行帳戶資料、支付紀錄）、本人輸入之出生日期（部分國家用於成人驗證）<br><br>
+    三、行銷與廣告推廣時<br>
+    必要項目：登入ID、姓名、性別、出生日期、服務使用紀錄、付款紀錄<br><br>
+    四、自動蒐集資訊<br>
+    服務使用過程中，將自動蒐集設備資訊、連線時間、使用紀錄、廣告識別碼等。<br><br>
+  </p>
+
+  <p class="mb-4"><span class="font-bold tracking-tighter">第3條（個人資料的保存與利用期間）</span><br>
+    本公司僅於達成蒐集與利用目的所需期間內保存您的個人資料。保存期間如下：<br><br>
+    一、會員資料<br>
+    會員退會後180日內刪除。但如涉及身份盜用或投訴案件，將保存至處理完成為止。<br><br>
+    二、支付與交易紀錄<br>
+    保存5年，依據《電子商務交易定型化契約應記載及不得記載事項》相關規定。<br><br>
+    三、客訴與申訴處理紀錄<br>
+    保存3年，依《消費者保護法》規定。<br><br>
+    四、行銷與廣告推廣紀錄<br>
+    自取得同意日起保存30日，或用戶撤回同意時立即停止使用。<br><br>
+    此外，依據法令規定，相關交易紀錄及網站使用紀錄之保存期間為：<br>
+    合約或申請撤回紀錄：5年<br>
+    付款及商品提供紀錄：5年<br>
+    消費者申訴或爭議處理紀錄：3年<br>
+    商品或服務標示、廣告紀錄：1年<br>
+    網站訪問紀錄（依《通訊保障及監察法》）：1年<br><br>
+  </p>
+
+    <p class="mb-4"><span class="font-bold tracking-tighter">第4條（個人資料的第三方提供）</span><br>
+      本公司原則上不會將您的個人資料提供予第三人，但以下情況除外：<br><br>
+      一、事先取得您的明確同意。<br>
+       二、為提供服務所需之支付結算。<br>
+       三、依法令規定或主管機關要求提供。<br>
+       四、經匿名化處理，無法識別特定個人之統計或研究目的。<br>
+       五、公司合併、分割、業務讓渡等權利義務移轉時。<br><br>
+      另，未來若因廣告獎勵型服務之提供，需向廣告商提供廣告識別碼等資料，將另行取得您的同意。<br><br>
+    </p>
+
+    <p class="mb-4"><span class="font-bold tracking-tighter">第5條（個人資料之處理委託）</span><br>
+      本公司目前尚未確定個人資料處理委託對象，平台服務亦處於正式上線準備階段。<br>
+      當日後確定委外廠商時，將於本政策公告委託目的、處理項目、保存期間等資訊，並取得用戶同意後進行。<br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第6條（個人資料之刪除與銷毀）</span><br>
+      您的個人資料在保存期間屆滿或處理目的達成時，將依下列方式刪除或銷毀：<br>
+      電子檔案：採用無法復原之方式刪除。<br>
+       紙本資料：碎紙機銷毀或焚化處理。<br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第7條（YouTube API服務使用告知）</span><br> 
+      本平台部分功能使用Google LLC提供之YouTube API服務，並遵守其服務條款與隱私政策。<br><br>
+      一、蒐集資訊<br>
+       用戶之YouTube頻道名稱、訂閱數、影片數、觀看數、影片列表等。<br><br>
+      二、使用目的<br>
+       用於平台內內容推薦、統計分析及個人化服務。<br><br>
+      三、權限撤回<br>
+       用戶可透過 <a href="https://myaccount.google.com/permissions" class="text-blue-500 underline">Google帳戶權限管理頁面</a> 隨時撤回API授權。<br><br>
+      四、參考政策<br>
+       <a href="https://www.youtube.com/t/terms" class="text-blue-500 underline">YouTube服務條款</a><br>
+       <a href="https://policies.google.com/privacy" class="text-blue-500 underline">Google隱私政策</a><br>
+       <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" class="text-blue-500 underline">YouTube API使用條款</a><br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第8條（Cookie與自動蒐集機制）</span><br>
+      為提升服務品質，本平台可能使用Cookie等技術。<br>
+      用途<br>
+       儲存用戶偏好設定、登入狀態與個人化內容。<br><br>
+      拒絕方式<br>
+       用戶可透過瀏覽器設定停用或刪除Cookie，但部分功能將可能受到影響。<br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第9條（當事人權利及行使方式）</span><br>
+      您可隨時行使下列權利：<br>
+      一、查詢或請求閱覽個人資料。<br>
+       二、請求補充、更正或刪除個人資料。<br>
+       三、請求停止蒐集、處理或利用個人資料。<br>
+       四、申請退會或撤回個資使用同意。<br>
+       五、法定代理人代行時，須提供證明文件。<br><br>
+      行使方式<br>
+       可透過平台客服中心、電子郵件或書面方式提出，本公司將於合理期間內處理您的請求。<br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第10條（個人資料安全維護）</span><br>
+      本公司為確保您的個人資料安全，採取下列措施：<br>
+      建立內部管理制度<br>
+       安裝防毒、防駭客系統與異常監控<br>
+       傳輸與儲存資料時進行加密<br>
+       保存系統存取紀錄六個月以上，並防止竄改<br>
+       嚴格控管內部人員存取權限<br>
+       限制資料存放場所之出入<br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第11條（個人資料保護責任人）</span><br>
+      本公司指定以下人員為個人資料保護責任人：<br>
+      姓名：朴正鎬<br>
+      電子郵件：dolseda@divvegames.com<br>
+      負責部門：資訊安全部<br><br>
+      如有任何個人資料相關疑問或申訴，歡迎聯絡上述窗口。<br><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第12條（權益侵害救濟方式）</span><br>
+      如您認為個人資料遭不當使用，可向下列單位申訴或尋求協助：<br>
+      個人資料保護專線（國家通訊傳播委員會）<br>
+      網站：<a href="https://www.ncc.gov.tw" class="text-blue-500 underline">https://www.ncc.gov.tw</a><br>
+      電話：+886-2-2343-3588<br><br>
+      個人資料保護專區（個資會）<br>
+      網站：<a href="https://www.pipa.gov.tw" class="text-blue-500 underline">https://www.pipa.gov.tw</a><br>
+      電話：+886-2-2388-8888<br><br>
+      法務部廉政署<br>
+      網站：<a href="https://www.ago.gov.tw" class="text-blue-500 underline">https://www.ago.gov.tw</a><br>
+    </p>
+    <p class="mb-4"><span class="font-bold tracking-tighter">第13條（隱私權政策之變更）</span><br>
+      本公司得依需求修改本政策。如有重大變更，將至少提前七日公告於本平台。<br>
+       對於涉及用戶權益之重大變更，將提前三十日公告並通知用戶。<br><br>
+    </p>
+    
+  </div>
 
         <!-- Footer -->
         <div class="flex justify-center">
@@ -312,16 +739,27 @@
     }
     
     function switchContent(type) {
-      document.getElementById('termsContent').classList.add('hidden');
-      document.getElementById('privacyContent').classList.add('hidden');
-      document.getElementById('termsTab').classList.remove('text-gray-800');
-      document.getElementById('privacyTab').classList.remove('text-gray-800');
-      if (type === 'terms') {
-        document.getElementById('termsContent').classList.remove('hidden');
-        document.getElementById('termsTab').classList.add('text-gray-800');
+      document.getElementById('termsContent_kr').classList.add('hidden');
+      document.getElementById('privacyContent_kr').classList.add('hidden');
+      document.getElementById('termsTab_kr').classList.remove('text-gray-800');
+      document.getElementById('privacyTab_kr').classList.remove('text-gray-800');
+      document.getElementById('termsContent_tw').classList.add('hidden');
+      document.getElementById('privacyContent_tw').classList.add('hidden');
+      document.getElementById('termsTab_tw').classList.remove('text-gray-800');
+      document.getElementById('privacyTab_tw').classList.remove('text-gray-800');
+      if (type === 'terms_kr') {
+        document.getElementById('termsContent_kr').classList.remove('hidden');
+        document.getElementById('termsTab_kr').classList.add('text-gray-800');
+      } else if (type === 'privacy_kr') {
+        document.getElementById('privacyContent_kr').classList.remove('hidden');
+        document.getElementById('privacyTab_kr').classList.add('text-gray-800');
+      } else if (type === 'terms_tw') {
+        document.getElementById('termsContent_tw').classList.remove('hidden');
+        document.getElementById('termsTab_tw').classList.add('text-gray-800');
       } else {
-        document.getElementById('privacyContent').classList.remove('hidden');
-        document.getElementById('privacyTab').classList.add('text-gray-800');
+
+        document.getElementById('privacyContent_tw').classList.remove('hidden');
+        document.getElementById('privacyTab_tw').classList.add('text-gray-800');
       }
     }
   </script>
